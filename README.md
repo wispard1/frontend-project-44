@@ -1,2 +1,1 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/wispard1/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/wispard1/frontend-project-44/actions)
+https://asciinema.org/a/FPou65XiaTuDedyIhHKLfsds3
