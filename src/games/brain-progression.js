@@ -1,0 +1,44 @@
+const generateRandomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+const generateProgression = () => {
+  const length = generateRandomNumber(5, 10);
+  const firstNumber = generateRandomNumber(1, 10);
+  const difference = generateRandomNumber(1, 5);
+
+  const progression = [];
+  for (let i = 0; i < length; i++) {
+    progression.push(firstNumber + i * difference);
+  }
+  return progression;
+};
+
+const hideElement = (progression) => {
+  const hiddenIndex = generateRandomNumber(0, progression.length - 1);
+  const hiddenValue = progression[hiddenIndex];
+
+  const hiddenProgression = [...progression];
+  hiddenProgression[hiddenIndex] = '..';
+
+  const hiddenProgressionString = hiddenProgression.join(' ');
+  const hiddenValueString = hiddenValue.toString();
+
+  return {
+    hiddenProgressionString,
+    hiddenValueString,
+  };
+};
+
+export const generateRound = () => {
+  const progression = generateProgression();
+  const { hiddenProgressionString, hiddenValueString } =
+    hideElement(progression);
+
+  const question = hiddenProgressionString;
+  const correctAnswer = hiddenValueString;
+
+  return { question, correctAnswer };
+};
+
+export const gameDescription = 'What number is missing in the progression?';
