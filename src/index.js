@@ -30,4 +30,9 @@ const runGame = (generateRound, gameDescription) => {
     console.log(`Congratulations, ${name}!`);
   }
 };
+
+export const generateRandomNumber = () => {
+  return Math.floor(Math.random() * 100) + 1;
+};
+
 export default runGame;

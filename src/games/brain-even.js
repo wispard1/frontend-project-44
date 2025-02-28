@@ -1,5 +1,7 @@
+import { generateRandomNumber } from '../index.js';
+
 export const generateRound = () => {
-  const number = Math.floor(Math.random() * 100) + 1;
+  const number = generateRandomNumber();
   const question = number.toString();
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
 
