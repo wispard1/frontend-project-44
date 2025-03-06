@@ -1,8 +1,10 @@
+import runGame from '../index.js';
+import { generateRandomNumber, getRandomOperation } from '../cli.js';
+
 export const generateRound = () => {
-  let num1 = Math.floor(Math.random() * 50) + 1;
-  let num2 = Math.floor(Math.random() * 50) + 1;
-  const operations = ['+', '-', '*'];
-  const operation = operations[Math.floor(Math.random() * operations.length)];
+  const operation = getRandomOperation();
+  let num1 = generateRandomNumber(1, 10);
+  let num2 = generateRandomNumber(1, 10);
 
   if (operation === '-' && num1 < num2) {
     [num1, num2] = [num2, num1];
@@ -19,7 +21,7 @@ export const generateRound = () => {
       case '*':
         return num1 * num2;
       default:
-        throw new Error('Недопустимая операция');
+        throw new Error(`Недопустимая операция: "${operation}"`);
     }
   };
 
@@ -28,3 +30,5 @@ export const generateRound = () => {
 };
 
 export const gameDescription = 'What is the result of the expression?';
+
+runGame(generateRound, gameDescription);
