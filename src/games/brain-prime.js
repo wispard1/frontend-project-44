@@ -1,4 +1,5 @@
-import { generateRandomNumber } from '../index.js';
+import runGame from '../index.js';
+import { generateRandomNumber } from '../cli.js';
 
 const isPrime = (n) => {
   if (n <= 1) return false;
@@ -21,3 +22,5 @@ export const generateRound = () => {
 
 export const gameDescription =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+runGame(generateRound, gameDescription);
