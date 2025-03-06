@@ -1,9 +1,10 @@
-import { generateRandomNumber } from '../index.js';
+import runGame from '../index.js';
+import { generateRandomNumber } from '../cli.js';
 
-export const findGCD = (a, b) => {
+export const findGCD = (num1, num2) => {
   let gcd = 1;
-  for (let i = 1; i <= Math.min(a, b); i++) {
-    if (a % i === 0 && b % i === 0) {
+  for (let i = 1; i <= Math.min(num1, num2); i++) {
+    if (num1 % i === 0 && num2 % i === 0) {
       gcd = i;
     }
   }
@@ -20,3 +21,5 @@ export const generateRound = () => {
 
 export const gameDescription =
   'Find the greatest common divisor of given numbers.';
+
+runGame(generateRound, gameDescription);
