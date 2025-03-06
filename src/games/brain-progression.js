@@ -1,6 +1,5 @@
-const generateRandomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+import runGame from '../index.js';
+import { generateRandomNumber } from '../cli.js';
 
 const generateProgression = () => {
   const length = generateRandomNumber(5, 10);
@@ -42,3 +41,5 @@ export const generateRound = () => {
 };
 
 export const gameDescription = 'What number is missing in the progression?';
+
+runGame(generateRound, gameDescription);
