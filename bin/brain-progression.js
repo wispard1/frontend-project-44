@@ -1,7 +1,3 @@
-import runGame from '../src/index.js';
-import {
-  generateRound,
-  gameDescription,
-} from '../src/games/brain-progression.js';
+#!/usr/bin/env node
 
-runGame(generateRound, gameDescription);
+import '../src/games/brain-progression.js';
