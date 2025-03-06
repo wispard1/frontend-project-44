@@ -1,12 +1,14 @@
-import { generateRandomNumber } from '../index.js';
+import runGame from '../index.js';
+import { generateRandomNumber, isEven } from '../cli.js';
 
-export const generateRound = () => {
+const generateRound = () => {
   const number = generateRandomNumber();
-  const question = number.toString();
-  const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
 
-  return { question, correctAnswer };
+  return { question: `${number}`, correctAnswer };
 };
 
 export const gameDescription =
   'Answer "yes" if the number is even, otherwise answer "no".';
+
+runGame(generateRound, gameDescription);
