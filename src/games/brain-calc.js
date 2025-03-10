@@ -7,7 +7,9 @@ const generateRound = () => {
   let num2 = generateRandomNumber(1, 10);
 
   if (operation === '-' && num1 < num2) {
-    [num1, num2] = [num2, num1];
+    const tempNum1 = num2;
+    const tempNum2 = num1;
+    [num1, num2] = [tempNum1, tempNum2];
   }
 
   const question = `${num1} ${operation} ${num2}`;
