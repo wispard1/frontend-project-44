@@ -1,7 +1,7 @@
 import runGame from '../index.js';
 import { generateRandomNumber, getRandomOperation } from '../cli.js';
 
-export const generateRound = () => {
+const generateRound = () => {
   const operation = getRandomOperation();
   let num1 = generateRandomNumber(1, 10);
   let num2 = generateRandomNumber(1, 10);
@@ -29,6 +29,6 @@ export const generateRound = () => {
   return { question, correctAnswer };
 };
 
-export const gameDescription = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 runGame(generateRound, gameDescription);

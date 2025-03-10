@@ -8,7 +8,7 @@ const generateRound = () => {
   return { question: `${number}`, correctAnswer };
 };
 
-export const gameDescription =
+const gameDescription =
   'Answer "yes" if the number is even, otherwise answer "no".';
 
 runGame(generateRound, gameDescription);

@@ -13,14 +13,14 @@ const isPrime = (n) => {
   return true;
 };
 
-export const generateRound = () => {
+const generateRound = () => {
   const number = generateRandomNumber(1, 100);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const question = `${number}`;
   return { question, correctAnswer };
 };
 
-export const gameDescription =
+const gameDescription =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 runGame(generateRound, gameDescription);

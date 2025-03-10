@@ -7,7 +7,7 @@ const generateProgression = () => {
   const difference = generateRandomNumber(1, 5);
 
   const progression = [];
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i += 1) {
     progression.push(firstNumber + i * difference);
   }
   return progression;
@@ -29,7 +29,7 @@ const hideElement = (progression) => {
   };
 };
 
-export const generateRound = () => {
+const generateRound = () => {
   const progression = generateProgression();
   const { hiddenProgressionString, hiddenValueString } =
     hideElement(progression);
@@ -40,6 +40,6 @@ export const generateRound = () => {
   return { question, correctAnswer };
 };
 
-export const gameDescription = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
 runGame(generateRound, gameDescription);
