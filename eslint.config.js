@@ -1,5 +1,5 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
+import globals from "globals";
+import pluginJs from "@eslint/js";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -10,12 +10,12 @@ export default [
       es2021: true,
     },
     extends: [
-      'eslint:recommended',
-      'plugin:prettier/recommended', // Добавляем поддержку Prettier
+      "eslint:recommended",
+      "plugin:prettier/recommended", // Добавляем поддержку Prettier
     ],
     rules: {
-      'linebreak-style': ['error', 'windows'],
-      'prettier/prettier': 'error',
+      "linebreak-style": ["error", "windows"],
+      "prettier/prettier": "error",
     },
   },
   pluginJs.configs.recommended,

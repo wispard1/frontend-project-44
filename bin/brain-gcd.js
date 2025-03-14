@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../src/games/brain-gcd.js';
+import "../src/games/brain-gcd.js";
