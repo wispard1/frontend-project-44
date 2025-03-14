@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
+import readlineSync from "readline-sync";
 
 const runGame = (generateRound, gameDescription) => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
+  console.log("Welcome to the Brain Games!");
+  const name = readlineSync.question("May I have your name: ");
   console.log(`Hello, ${name}!`);
 
   console.log(gameDescription);
@@ -11,17 +11,15 @@ const runGame = (generateRound, gameDescription) => {
   let correctCount = 0;
 
   for (let i = 0; i < rounds; i += 1) {
-    const { question, correctAnswer } = generateRound();
+    const { question, correctAnswer } = generateRound(); // eslint-disable-line comma-dangle
     console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question("Your answer: ");
 
     if (userAnswer === correctAnswer) {
-      console.log('Correct!');
+      console.log("Correct!");
       correctCount += 1;
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
