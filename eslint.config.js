@@ -7,6 +7,8 @@ export default [
     languageOptions: { globals: globals.browser },
     rules: {
       'linebreak-style': ['error', 'windows'],
+      quotes: ['error', 'single'],
+      'object-curly-newline': ['error', { consistent: true }],
     },
   },
   pluginJs.configs.recommended,
