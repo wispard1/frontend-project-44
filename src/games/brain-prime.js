@@ -20,6 +20,6 @@ const generateRound = () => {
   return { question, correctAnswer };
 };
 
-const gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 runGame(generateRound, gameDescription);
