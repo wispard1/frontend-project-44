@@ -1,5 +1,5 @@
-import runGame from "../index.js";
-import { generateRandomNumber } from "../cli.js";
+import runGame from '../index.js';
+import { generateRandomNumber } from '../cli.js';
 
 const findGCD = (num1, num2) => {
   let gcd = 1;

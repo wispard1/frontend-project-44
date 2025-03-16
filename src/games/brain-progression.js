@@ -1,5 +1,5 @@
-import runGame from "../index.js";
-import { generateRandomNumber } from "../cli.js";
+import runGame from '../index.js';
+import { generateRandomNumber } from '../cli.js';
 
 const generateProgression = () => {
   const length = generateRandomNumber(5, 10);
@@ -18,9 +18,9 @@ const hideElement = (progression) => {
   const hiddenValue = progression[hiddenIndex];
 
   const hiddenProgression = [...progression];
-  hiddenProgression[hiddenIndex] = "..";
+  hiddenProgression[hiddenIndex] = '..';
 
-  const hiddenProgressionString = hiddenProgression.join(" ");
+  const hiddenProgressionString = hiddenProgression.join(' ');
   const hiddenValueString = hiddenValue.toString();
 
   return {

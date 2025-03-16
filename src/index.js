@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const runGame = (generateRound, gameDescription) => {
   console.log('Welcome to the Brain Games!');
@@ -19,7 +19,9 @@ const runGame = (generateRound, gameDescription) => {
       console.log('Correct!');
       correctCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
+      );
       console.log(`Let's try again, ${name}!`);
       return;
     }
