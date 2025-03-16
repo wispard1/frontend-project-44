@@ -17,9 +17,9 @@ const getRandomOperation = () => {
 
 const isEven = (number) => number % 2 === 0;
 
-export { 
-  greetUser, 
+export {
+  greetUser,
   generateRandomNumber,
-  getRandomOperation, 
+  getRandomOperation,
   isEven,
 };
