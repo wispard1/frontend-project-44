@@ -19,9 +19,7 @@ const runGame = (generateRound, gameDescription) => {
       console.log('Correct!');
       correctCount += 1;
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

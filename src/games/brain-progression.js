@@ -31,8 +31,7 @@ const hideElement = (progression) => {
 
 const generateRound = () => {
   const progression = generateProgression();
-  const { hiddenProgressionString, hiddenValueString } =
-    hideElement(progression);
+  const { hiddenProgressionString, hiddenValueString } = hideElement(progression);
 
   const question = hiddenProgressionString;
   const correctAnswer = hiddenValueString;
