@@ -19,4 +19,5 @@ export {
   greetUser, 
   generateRandomNumber, 
   getRandomOperation, 
-  isEven };
+  isEven 
+};
