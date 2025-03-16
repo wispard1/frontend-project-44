@@ -31,4 +31,4 @@ const generateRound = () => {
 
 const gameDescription = 'What is the result of the expression?';
 
-runGame(generateRound, gameDescription);
+export default () => runGame(generateRound, gameDescription);

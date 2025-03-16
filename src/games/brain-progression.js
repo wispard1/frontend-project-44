@@ -1,11 +1,7 @@
 import runGame from '../index.js';
 import { generateRandomNumber } from '../cli.js';
 
-const generateProgression = () => {
-  const length = generateRandomNumber(5, 10);
-  const firstNumber = generateRandomNumber(1, 10);
-  const difference = generateRandomNumber(1, 5);
-
+const generateProgression = (length, firstNumber, difference) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
     progression.push(firstNumber + i * difference);
@@ -30,7 +26,11 @@ const hideElement = (progression) => {
 };
 
 const generateRound = () => {
-  const progression = generateProgression();
+  const length = generateRandomNumber(5, 10);
+  const firstNumber = generateRandomNumber(1, 10);
+  const difference = generateRandomNumber(1, 5);
+
+  const progression = generateProgression(length, firstNumber, difference);
   const { hiddenProgressionString, hiddenValueString } = hideElement(progression);
 
   const question = hiddenProgressionString;
@@ -41,4 +41,4 @@ const generateRound = () => {
 
 const gameDescription = 'What number is missing in the progression?';
 
-runGame(generateRound, gameDescription);
+export default () => runGame(generateRound, gameDescription);

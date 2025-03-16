@@ -10,4 +10,4 @@ const generateRound = () => {
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-runGame(generateRound, gameDescription);
+export default () => runGame(generateRound, gameDescription);
