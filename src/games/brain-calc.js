@@ -29,6 +29,6 @@ const generateRound = () => {
   return { question, correctAnswer };
 };
 
-const gameDescription = "What is the result of the expression?";
+const gameDescription = 'What is the result of the expression?';
 
 runGame(generateRound, gameDescription);

@@ -19,6 +19,6 @@ const generateRound = () => {
   return { question, correctAnswer };
 };
 
-const gameDescription = "Find the greatest common divisor of given numbers.";
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 runGame(generateRound, gameDescription);
